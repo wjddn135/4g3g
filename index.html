@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>카카오톡 버튼있는 메시지 전송하기</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>아래 카카오톡 아이콘을 눌러 전송하세요</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('277a948186434ff82675452c54943885');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: '와 샌즈!',
+        description: '아 샌즈 아시는구나....',
+        imageUrl:
+          'https://ifh.cc/g/qLKBOW.jpg',
+        link: {
+          mobileWebUrl: 'https://namu.wiki/w/%EC%99%80%20%EC%83%8C%EC%A6%88!%20%EC%96%B8%EB%8D%94%ED%85%8C%EC%9D%BC%20%EC%95%84%EC%8B%9C%EB%8A%94%EA%B5%AC%EB%82%98!',
+          webUrl: 'https://namu.wiki/w/%EC%99%80%20%EC%83%8C%EC%A6%88!%20%EC%96%B8%EB%8D%94%ED%85%8C%EC%9D%BC%20%EC%95%84%EC%8B%9C%EB%8A%94%EA%B5%AC%EB%82%98!',
+        },
+      },
+      social: {
+        likeCount: 9999, //99999가 최대입니다
+        commentCount: 2032, //99999가 최대입니다
+        sharedCount: 3421, //99999가 최대입니다
+      },
+      buttons: [
+        {
+          title: '샌즈에 대해 알아보기',
+          link: {
+            mobileWebUrl: 'https://namu.wiki/w/%EC%99%80%20%EC%83%8C%EC%A6%88!%20%EC%96%B8%EB%8D%94%ED%85%8C%EC%9D%BC%20%EC%95%84%EC%8B%9C%EB%8A%94%EA%B5%AC%EB%82%98!',
+            webUrl: 'https://namu.wiki/w/%EC%99%80%20%EC%83%8C%EC%A6%88!%20%EC%96%B8%EB%8D%94%ED%85%8C%EC%9D%BC%20%EC%95%84%EC%8B%9C%EB%8A%94%EA%B5%AC%EB%82%98!',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- 이미지/버튼 클릭 시 주소는 Kakao Developers의 애플리케이션 > 플랫폼 > Web에 넣어야 클릭했을때 성공적으로 표시됩니다 -->
+  </body>
+</html>
